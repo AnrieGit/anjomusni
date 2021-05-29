@@ -7,22 +7,27 @@ import Contact from "../views/Contact.vue";
 const routes = [
 	{
 		path: "/",
-		name: "Skills",
+		name: "home",
+		component: Skills,
+	},
+	{
+		path: "/skills",
+		name: "skills",
 		component: Skills,
 	},
 	{
 		path: "/projects",
-		name: "Projects",
+		name: "projects",
 		component: Projects,
 	},
 	{
 		path: "/about",
-		name: "About",
+		name: "about",
 		component: About,
 	},
 	{
 		path: "/contact",
-		name: "Contact",
+		name: "contact",
 		component: Contact,
 	},
 ];
@@ -30,6 +35,20 @@ const routes = [
 const router = createRouter({
 	history: createWebHistory(process.env.BASE_URL),
 	routes,
+	scrollBehavior(to, from, savedPosition) {
+		if (to.name != "home") {
+			return {
+				el: "#top",
+				behavior: "smooth",
+			};
+		}
+
+		return {
+			top: 0,
+			behavior: "smooth",
+		};
+		// return { top: 0, behavior: "smooth" };
+	},
 });
 
 export default router;

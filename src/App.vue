@@ -1,10 +1,14 @@
 <template>
 	<div class="min-h-screen">
-		<div class="grid grid-cols-1 justify-items-center">
-			<!-- Header -->
-			<Header />
+		<!-- Alert -->
+		<Alert :show="show_alert" :message="message" :status="status" />
 
-			<div class="relative w-3/4 max-w-7xl -mt-40 z-10">
+		<!-- Header -->
+		<Header />
+
+		<div class="grid grid-cols-1 justify-items-center">
+
+			<div class="w-full sm:w-3/4 max-w-7xl px-5 ms:px-0 -mt-40 z-10">
 				<div class="grid sm:grid-cols-2 bg-white shadow-md rounded-t-md justify-items-center">
 					<!-- Image -->
 					<div class="sm:pl-5 sm:pb-5 sm:mr-auto">
@@ -14,8 +18,12 @@
 					<!-- Icons -->
 					<div class="p-5 sm:ml-auto">
 						<div class="flex space-x-5">
-							<MailIcon class="h-7 w-7 text-tapa-700" />
-							<GithubIcon class="h-7 w-7 text-tapa-700" />
+							<a href="mailto:350anviera195@gmail.com" class="no-underline">
+								<MailIcon class="h-7 w-7 text-tapa-700 hover:text-tapa-500 cursor-pointer" />
+							</a>
+							<a href="https://github.com/AnrieGit" class="no-underline" target="_blank">
+								<GithubIcon class="h-7 w-7 text-tapa-700 hover:text-tapa-500 cursor-pointer" />
+							</a>
 						</div>
 					</div>
 
@@ -28,13 +36,14 @@
 				</div>
 
 				<!-- Nav -->
-				<div class="sticky top-0 bg-white px-5 pb-5 shadow-md rounded-b-md z-50">
+				<div id="top"></div>
+				<div class="sticky top-0 bg-white px-5 pb-5 rounded-b-md z-50">
 					<Nav />
 				</div>
 
 				<!-- Content -->
 				<div class="sm:px-5 pb-5">
-					<router-view />
+					<router-view @show-alert="showAlert" />
 				</div>
 			</div>
 
@@ -45,9 +54,12 @@
 </template>
 
 <script>
+import { ref } from 'vue'
+
 import { MailIcon } from '@heroicons/vue/outline'
 import GithubIcon from './components/icons/GithubIcon'
 
+import Alert from './components/Alert'
 import Header from './components/Header'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
@@ -57,10 +69,32 @@ export default {
   components: {
     MailIcon,
     GithubIcon,
+		Alert,
     Header,
     Nav,
     Footer,
 	},
+	emits: ['show-alert'],
+	setup() {
+		const show_alert = ref(false)
+		const message = ref('')
+		const status = ref(null)
+
+		return { 
+			show_alert,
+			message,
+			status,
+		}
+	},
+	methods: {
+		showAlert(response) {
+			this.show_alert = true;
+			this.message = response.message
+			this.status = response.status
+
+			setTimeout(()=>{ this.show_alert = false }, 3000)
+		}
+	}
 }
 </script>
 

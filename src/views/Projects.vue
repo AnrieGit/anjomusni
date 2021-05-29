@@ -1,8 +1,10 @@
 <template>
 	<div class="w-full pt-5">
-		<h2 class="text-white bg-tapa-900 rounded-md p-5 bg-gradient-to-r from-tapa-500 to-tapa-700">Projects</h2>
+		<h2 class="text-white bg-tapa-900 rounded-md p-5 bg-gradient-to-r from-tapa-500 to-tapa-700">
+			Projects
+		</h2>
 
-		<transition-group class="relative grid grid-cols-1 lg:grid-cols-2 gap-20 p-10"
+		<transition-group class="relative grid grid-cols-1 lg:grid-cols-2 gap-20 sm:px-5 py-10"
 			appear
 			tag="div"
 			@before-enter="beforeEnter"
@@ -25,12 +27,12 @@
 							Travel Management System is a web application that can add, edit, update and delete records of clients, tours, travel dates, guest lists, and discounts. It has a function that can export sales reports, guest lists, travel vouchers, and a database for backup.
 						</p>
 						<div class="flex flex-around items-centers gap-4 p-5">
-							<button class="w-full bg-tapa-900 text-white font-medium rounded-md px-4 py-3">
+							<Button type="button">
 								<EyeIcon class="h-4 w-4"/>
-							</button>
-							<button class="w-full bg-tapa-900 text-white font-medium rounded-md px-4 py-3">
+							</Button>
+							<Button type="button">
 								<GithubIcon class="h-4 w-4"/>
-							</button>
+							</Button>
 						</div>
 					</div>
 				</div>
@@ -50,12 +52,12 @@
 							Task Tracer is a simple web application made using Vue JS 3.
 						</p>
 						<div class="flex flex-around items-centers gap-4 p-5">
-							<button class="w-full bg-tapa-900 text-white font-medium rounded-md px-4 py-3">
+							<Button type="button">
 								<EyeIcon class="h-4 w-4"/>
-							</button>
-							<button class="w-full bg-tapa-900 text-white font-medium rounded-md px-4 py-3">
+							</Button>
+							<Button type="button">
 								<GithubIcon class="h-4 w-4"/>
-							</button>
+							</Button>
 						</div>
 					</div>
 				</div>
@@ -77,12 +79,12 @@
 							The main website of ACCESS Computer College.
 						</p>
 						<div class="flex flex-around items-centers gap-4 p-5">
-							<button class="w-full bg-tapa-900 text-white font-medium rounded-md px-4 py-3">
+							<Button type="button">
 								<EyeIcon class="h-4 w-4"/>
-							</button>
-							<button class="w-full bg-tapa-900 text-white font-medium rounded-md px-4 py-3">
+							</Button>
+							<Button type="button">
 								<GithubIcon class="h-4 w-4"/>
-							</button>
+							</Button>
 						</div>
 					</div>
 				</div>
@@ -104,12 +106,12 @@
 							It is use to manage the printing process of diploma.
 						</p>
 						<div class="flex flex-around items-centers gap-4 p-5">
-							<button class="w-full bg-tapa-900 text-white font-medium rounded-md px-4 py-3">
+							<Button type="button">
 								<EyeIcon class="h-4 w-4"/>
-							</button>
-							<button class="w-full bg-tapa-900 text-white font-medium rounded-md px-4 py-3">
+							</Button>
+							<Button type="button">
 								<GithubIcon class="h-4 w-4"/>
-							</button>
+							</Button>
 						</div>
 					</div>
 				</div>
@@ -131,12 +133,12 @@
 							Online I.D System or OIDS is a CRUD web application that can record and print the I.D of the students.
 						</p>
 						<div class="flex flex-around items-centers gap-4 p-5">
-							<button class="w-full bg-tapa-900 text-white font-medium rounded-md px-4 py-3">
+							<Button type="button">
 								<EyeIcon class="h-4 w-4"/>
-							</button>
-							<button class="w-full bg-tapa-900 text-white font-medium rounded-md px-4 py-3">
+							</Button>
+							<Button type="button">
 								<GithubIcon class="h-4 w-4"/>
-							</button>
+							</Button>
 						</div>
 					</div>
 				</div>
@@ -148,14 +150,18 @@
 
 <script>
 	import gsap from 'gsap'
+
+	import Button from '../components/Button'
+
 	import { EyeIcon } from '@heroicons/vue/solid'
 	import GithubIcon from '../components/icons/GithubIcon'
 
 	export default {
 		name: 'Projects',
 		components: {
+			Button,
 			EyeIcon,
-			GithubIcon
+			GithubIcon,
 		},
 		methods: {
 			beforeEnter(el) {

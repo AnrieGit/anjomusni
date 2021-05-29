@@ -41,15 +41,16 @@ module.exports = {
 					"900": "#002d4b",
 				},
 			},
-			backgroundImage: (theme) => ({
-				intersection:
-					"url('~@/assets/images/background/happy-intersection.svg')",
-			}),
+			// backgroundImage: (theme) => ({
+			// 	intersection:
+			// 		"url('~@/assets/images/background/happy-intersection.svg')",
+			// }),
 		},
 	},
 	variants: {
 		extend: {},
 		opacity: ["disabled"],
+		cursor: ["disabled"],
 	},
 	plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
 };

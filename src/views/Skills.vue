@@ -1,9 +1,9 @@
 <template>
-	<div class="w-full pt-5">
+	<div id="skills" class="w-full pt-5">
 		<!-- HTML -->
 		<h2 class="text-white bg-tapa-900 rounded-md p-5 bg-gradient-to-r from-tapa-500 to-tapa-700">HTML</h2>
 		<transition-group appear tag="ul" name="html" class="flex flex-wrap justify-center lg:justify-start">
-			<li v-for="(skill, index) in html" :key="index" class="grid grid-cols-1 justify-items-center p-5 w-32 lg:w-40">
+			<li v-for="(skill, index) in html" :key="index" class="grid grid-cols-1 justify-items-center sm:px-5 py-5 w-32 lg:w-40">
 				<img :src="skill.path" :alt="skill.image" class="max-h-16">
 				<div class="mt-3 font-bold text-center text-tapa-500">
 					{{ skill.name }}
@@ -14,7 +14,7 @@
 		<!-- CSS -->
 		<h2 class="text-white bg-tapa-900 rounded-md p-5 bg-gradient-to-r from-tapa-500 to-tapa-700">CSS</h2>
 		<transition-group appear tag="ul" name="css" class="flex flex-wrap justify-center lg:justify-start">
-			<li v-for="(skill, index) in css" :key="index" class="grid grid-cols-1 justify-items-center p-5 w-32 lg:w-40">
+			<li v-for="(skill, index) in css" :key="index" class="grid grid-cols-1 justify-items-center sm:px-5 py-5 w-32 lg:w-40">
 				<img :src="skill.path" :alt="skill.image" class="max-h-16">
 				<div class="mt-3 font-bold text-center text-tapa-500">
 					{{ skill.name }}
@@ -25,7 +25,7 @@
 		<!-- Javascript -->
 		<h2 class="text-white bg-tapa-900 rounded-md p-5 bg-gradient-to-r from-tapa-500 to-tapa-700">Javascript</h2>
 		<transition-group appear tag="ul" name="javascript" class="flex flex-wrap justify-center lg:justify-start">
-			<li v-for="(skill, index) in javascript" :key="index" class="grid grid-cols-1 justify-items-center p-5 w-32 lg:w-40">
+			<li v-for="(skill, index) in javascript" :key="index" class="grid grid-cols-1 justify-items-center sm:px-5 py-5 w-32 lg:w-40">
 				<img :src="skill.path" :alt="skill.image" class="max-h-16">
 				<div class="mt-3 font-bold text-center text-tapa-500">
 					{{ skill.name }}
@@ -36,7 +36,7 @@
 		<!-- Backend -->
 		<h2 class="text-white bg-tapa-900 rounded-md p-5 bg-gradient-to-r from-tapa-500 to-tapa-700">Backend</h2>
 		<transition-group appear tag="ul" name="backend" class="flex flex-wrap justify-center lg:justify-start">
-			<li v-for="(skill, index) in backend" :key="index" class="grid grid-cols-1 justify-items-center p-5 w-32 lg:w-40">
+			<li v-for="(skill, index) in backend" :key="index" class="grid grid-cols-1 justify-items-center sm:px-5 py-5 w-32 lg:w-40">
 				<img :src="skill.path" :alt="skill.image" class="max-h-16">
 				<div class="mt-3 font-bold text-center text-tapa-500">
 					{{ skill.name }}
@@ -47,7 +47,7 @@
 		<!-- Version Control -->
 		<h2 class="text-white bg-tapa-900 rounded-md p-5 bg-gradient-to-r from-tapa-500 to-tapa-700">Version Control</h2>
 		<transition-group appear tag="ul" name="versioncontrol" class="flex flex-wrap justify-center lg:justify-start">
-			<li v-for="(skill, index) in versioncontrol" :key="index" class="grid grid-cols-1 justify-items-center p-5 w-32 lg:w-40">
+			<li v-for="(skill, index) in versioncontrol" :key="index" class="grid grid-cols-1 justify-items-center sm:px-5 py-5 w-32 lg:w-40">
 				<img :src="skill.path" :alt="skill.image" class="max-h-16">
 				<div class="mt-3 font-bold text-center text-tapa-500">
 					{{ skill.name }}
@@ -58,7 +58,7 @@
 		<!-- Others -->
 		<h2 class="text-white bg-tapa-900 rounded-md p-5 bg-gradient-to-r from-tapa-500 to-tapa-700">Others</h2>
 		<transition-group appear tag="ul" name="others" class="flex flex-wrap justify-center lg:justify-start">
-			<li v-for="(skill, index) in others" :key="index" class="grid grid-cols-1 justify-items-center p-5 w-32 lg:w-40">
+			<li v-for="(skill, index) in others" :key="index" class="grid grid-cols-1 justify-items-center sm:px-5 py-5 w-32 lg:w-40">
 				<img :src="skill.path" :alt="skill.image" class="max-h-16">
 				<div class="mt-3 font-bold text-center text-tapa-500">
 					{{ skill.name }}
@@ -202,7 +202,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.html-enter-from,
 	.html-leave-to,
 	.css-enter-from,
