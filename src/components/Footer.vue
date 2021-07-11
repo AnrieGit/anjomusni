@@ -1,7 +1,7 @@
 <template>
-    <div class="w-full bg-tapa-900 p-5">
+    <div class="w-full bg-tapa-900 pt-40 pb-5">
         <div class="flex justify-center items-center font-bold text-sm text-white z-10">
-            Made with&nbsp;<HeartIcon class="h-5 w-5 text-red-500"/>&nbsp;by Anjo
+            Made with <HeartIcon class="h-5 w-5 text-red-500 mx-1"/> by <span class="text-orange-400 ml-1">Anjo</span>
         </div>
         <!-- <Wave class="absolute cover bottom-0 -mb-48 w-full"/> -->
     </div>

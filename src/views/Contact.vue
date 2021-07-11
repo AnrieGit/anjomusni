@@ -1,9 +1,5 @@
 <template>
 	<div class="pt-5">
-		<!-- <h2 class="text-white bg-tapa-900 rounded-md p-5 bg-gradient-to-r from-tapa-500 to-tapa-700">
-			Get in touch
-		</h2> -->
-
 		<div class="pb-5">
 			<transition appear name="contact">
 				<div class="relative overflow-hidden font-medium bg-white shadow-md rounded-md">

@@ -4,6 +4,18 @@
 
 @tailwind utilities;
 
+@layer utilities {
+	.animation-delay-2s {
+		animation-delay: 2s;
+	}
+	.animation-delay-4s {
+		animation-delay: 4s;
+	}
+	.animation-delay-6s {
+		animation-delay: 6s;
+	}
+}
+
 @layer base {
 	h1 {
 		@apply text-3xl;

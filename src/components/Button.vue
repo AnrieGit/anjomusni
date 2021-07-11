@@ -1,5 +1,5 @@
 <template>
-  <button :name="name" :type="type" :disabled="loading" class="inline-flex justify-center item-center bg-tapa-700 hover:bg-tapa-500 text-white font-medium rounded-md px-4 py-3  focus:outline-none focus:ring-2 focus:ring-tapa-900 disabled:opacity-75 disabled:cursor-default">
+  <button :name="name" :type="type" :disabled="loading" class="inline-flex justify-center item-center bg-orange-400 hover:bg-orange-500 text-white font-medium rounded-md px-4 py-3  focus:outline-none disabled:opacity-75 disabled:cursor-default">
     <slot></slot>
   </button>
 </template>

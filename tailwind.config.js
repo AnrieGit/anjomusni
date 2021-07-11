@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
 	purge: { content: ["./public/**/*.html", "./src/**/*.vue"] },
 	darkMode: false, // or 'media' or 'class'
@@ -39,6 +41,26 @@ module.exports = {
 					"700": "#004474",
 					"800": "#00375c",
 					"900": "#002d4b",
+				},
+				orange: colors.orange,
+			},
+			animation: {
+				blob: "blob 7s infinite",
+			},
+			keyframes: {
+				blob: {
+					"0%": {
+						transform: "translate(0px, 0px) scale(1)",
+					},
+					"33%": {
+						transform: "translate(30px, -30px) scale(0.9)",
+					},
+					"66%": {
+						transform: "translate(-20px, 30px) scale(1.1)",
+					},
+					"100%": {
+						transform: "translate(0px, 0px) scale(1)",
+					},
 				},
 			},
 			// backgroundImage: (theme) => ({
