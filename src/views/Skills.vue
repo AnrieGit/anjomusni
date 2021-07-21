@@ -1,235 +1,136 @@
 <template>
-	<div id="skills" class="w-full pt-5">
-		<!-- HTML -->
-		<h2 class="text-white bg-tapa-900 rounded-md p-5 bg-gradient-to-r from-tapa-500 to-tapa-700">HTML</h2>
-		<transition-group appear tag="ul" name="html" class="flex flex-wrap justify-center lg:justify-start">
-			<li v-for="(skill, index) in html" :key="index" class="grid grid-cols-1 justify-items-center sm:px-5 py-5 w-32 lg:w-40">
-				<img :src="skill.path" :alt="skill.image" class="max-h-16">
-				<div class="mt-3 font-bold text-center text-tapa-500">
-					{{ skill.name }}
-				</div>
-			</li>
-		</transition-group>
+	<div>
+		<div class="mt-10">
+            <img class="w-full" src="../assets/images/svg/Wave1.svg" alt="Wave1.svg">
+        </div>
 
-		<!-- CSS -->
-		<h2 class="text-white bg-tapa-900 rounded-md p-5 bg-gradient-to-r from-tapa-500 to-tapa-700">CSS</h2>
-		<transition-group appear tag="ul" name="css" class="flex flex-wrap justify-center lg:justify-start">
-			<li v-for="(skill, index) in css" :key="index" class="grid grid-cols-1 justify-items-center sm:px-5 py-5 w-32 lg:w-40">
-				<img :src="skill.path" :alt="skill.image" class="max-h-16">
-				<div class="mt-3 font-bold text-center text-tapa-500">
-					{{ skill.name }}
+		<div class="bg-tapa-800 -mt-1">
+			<div class="px-10 xl:px-40">
+				<div class="text-center text-orange-400 pt-10 sm:pt-0">
+					<h1>Skills</h1>
 				</div>
-			</li>
-		</transition-group>
+				
+				<div class="grid grid-cols-3 lg:grid-cols-5 justify-items-center mt-20">
+					<div class="flex flex-col justify-center text-center m-5">
+						<img class="h-16" src="../assets/images/skills/html5.svg" alt="html5.svg">
+						<span class="text-medium text-white mt-1">
+							HTML5
+						</span>
+					</div>
+					<div class="flex flex-col justify-center text-center m-5">
+						<img class="h-16" src="../assets/images/skills/css3.svg" alt="css3.svg">
+						<span class="text-medium text-white mt-1">
+							CSS3
+						</span>
+					</div>
+					<div class="flex flex-col justify-center text-center m-5">
+						<img class="h-16" src="../assets/images/skills/javascript.svg" alt="javascript.svg">
+						<span class="text-medium text-white mt-1">
+							Javascript
+						</span>
+					</div>
+					<div class="flex flex-col justify-center text-center m-5">
+						<img class="h-16" src="../assets/images/skills/tailwind-css.svg" alt="tailwind-css.svg">
+						<span class="text-medium text-white mt-1">
+							Tailwindcss
+						</span>
+					</div>
+					<div class="flex flex-col justify-center text-center m-5">
+						<img class="h-16" src="../assets/images/skills/bootstrap.svg" alt="bootstrap.svg">
+						<span class="text-medium text-white mt-1">
+							Bootstrap
+						</span>
+					</div>
+					<div class="flex flex-col justify-center text-center m-5">
+						<img class="h-16" src="../assets/images/skills/Materializecss.svg" alt="Materializecss.svg">
+						<span class="text-medium text-white mt-1">
+							Materializecss
+						</span>
+					</div>
+					<div class="flex flex-col justify-center text-center m-5">
+						<img class="h-16" src="../assets/images/skills/vue.svg" alt="vue.svg">
+						<span class="text-medium text-white mt-1">
+							VueJS
+						</span>
+					</div>
+					<div class="flex flex-col justify-center text-center m-5">
+						<img class="h-16" src="../assets/images/skills/jquery.svg" alt="jquery.svg">
+						<span class="text-medium text-white mt-1">
+							JQuery
+						</span>
+					</div>
+					<div class="flex flex-col justify-center text-center m-5">
+						<img class="h-16" src="../assets/images/skills/nodejs-icon.svg" alt="nodejs-icon.svg">
+						<span class="text-medium text-white mt-1">
+							NodeJS
+						</span>
+					</div>
+					<div class="flex flex-col justify-center text-center m-5">
+						<img class="h-16" src="../assets/images/skills/php.svg" alt="php.svg">
+						<span class="text-medium text-white mt-1">
+							PHP
+						</span>
+					</div>
+					<div class="flex flex-col justify-center text-center m-5">
+						<img class="h-16" src="../assets/images/skills/laravel.svg" alt="laravel.svg">
+						<span class="text-medium text-white mt-1">
+							Laravel
+						</span>
+					</div>
+					<div class="flex flex-col justify-center text-center m-5">
+						<img class="h-16" src="../assets/images/skills/livewire.svg" alt="livewire.svg">
+						<span class="text-medium text-white mt-1">
+							Livewire
+						</span>
+					</div>
+					<div class="flex flex-col justify-center text-center m-5">
+						<img class="h-16" src="../assets/images/skills/mysql.svg" alt="mysql.svg">
+						<span class="text-medium text-white mt-1">
+							MySQL
+						</span>
+					</div>
+					<div class="flex flex-col justify-center text-center m-5">
+						<img class="h-16" src="../assets/images/skills/git.svg" alt="git.svg">
+						<span class="text-medium text-white mt-1">
+							Git
+						</span>
+					</div>
+					<div class="flex flex-col justify-center text-center m-5">
+						<img class="h-16" src="../assets/images/skills/heroku.svg" alt="heroku.svg">
+						<span class="text-medium text-white mt-1">
+							Heroku
+						</span>
+					</div>
+					<div class="flex flex-col justify-center text-center m-5">
+						<img class="h-16" src="../assets/images/skills/adobe-photoshop.svg" alt="adobe-photoshop.svg">
+						<span class="text-medium text-white mt-1">
+							Photoshop
+						</span>
+					</div>
+					<div class="flex flex-col justify-center text-center m-5">
+						<img class="h-16" src="../assets/images/skills/sony-vegas-logo.svg" alt="sony-vegas-logo.svg">
+						<span class="text-medium text-white mt-1">
+							Sony Vegas
+						</span>
+					</div>
+					<div class="flex flex-col justify-center text-center m-5">
+						<img class="h-16" src="../assets/images/skills/filmora-logo.svg" alt="filmora-logo.svg">
+						<span class="text-medium text-white mt-1">
+							Filmora
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
 
-		<!-- Javascript -->
-		<h2 class="text-white bg-tapa-900 rounded-md p-5 bg-gradient-to-r from-tapa-500 to-tapa-700">Javascript</h2>
-		<transition-group appear tag="ul" name="javascript" class="flex flex-wrap justify-center lg:justify-start">
-			<li v-for="(skill, index) in javascript" :key="index" class="grid grid-cols-1 justify-items-center sm:px-5 py-5 w-32 lg:w-40">
-				<img :src="skill.path" :alt="skill.image" class="max-h-16">
-				<div class="mt-3 font-bold text-center text-tapa-500">
-					{{ skill.name }}
-				</div>
-			</li>
-		</transition-group>
-
-		<!-- Backend -->
-		<h2 class="text-white bg-tapa-900 rounded-md p-5 bg-gradient-to-r from-tapa-500 to-tapa-700">Backend</h2>
-		<transition-group appear tag="ul" name="backend" class="flex flex-wrap justify-center lg:justify-start">
-			<li v-for="(skill, index) in backend" :key="index" class="grid grid-cols-1 justify-items-center sm:px-5 py-5 w-32 lg:w-40">
-				<img :src="skill.path" :alt="skill.image" class="max-h-16">
-				<div class="mt-3 font-bold text-center text-tapa-500">
-					{{ skill.name }}
-				</div>
-			</li>
-		</transition-group>
-
-		<!-- Version Control -->
-		<h2 class="text-white bg-tapa-900 rounded-md p-5 bg-gradient-to-r from-tapa-500 to-tapa-700">Version Control</h2>
-		<transition-group appear tag="ul" name="versioncontrol" class="flex flex-wrap justify-center lg:justify-start">
-			<li v-for="(skill, index) in versioncontrol" :key="index" class="grid grid-cols-1 justify-items-center sm:px-5 py-5 w-32 lg:w-40">
-				<img :src="skill.path" :alt="skill.image" class="max-h-16">
-				<div class="mt-3 font-bold text-center text-tapa-500">
-					{{ skill.name }}
-				</div>
-			</li>
-		</transition-group>
-
-		<!-- Others -->
-		<h2 class="text-white bg-tapa-900 rounded-md p-5 bg-gradient-to-r from-tapa-500 to-tapa-700">Others</h2>
-		<transition-group appear tag="ul" name="others" class="flex flex-wrap justify-center lg:justify-start">
-			<li v-for="(skill, index) in others" :key="index" class="grid grid-cols-1 justify-items-center sm:px-5 py-5 w-32 lg:w-40">
-				<img :src="skill.path" :alt="skill.image" class="max-h-16">
-				<div class="mt-3 font-bold text-center text-tapa-500">
-					{{ skill.name }}
-				</div>
-			</li>
-		</transition-group>
+		<div class="-mt-1">
+            <img class="w-full transform rotate-180" src="../assets/images/svg/Wave1.svg" alt="Wave1.svg">
+        </div>
 	</div>
 </template>
 
 <script>
-	import { ref } from 'vue'
-
-	export default {
-		name: 'Skills',
-		setup() {
-			const html = ref([
-				{
-					name: 'HTML5',
-					image: 'html5.png',
-					path: require('../assets/images/skills/html/html5.png')
-				},
-				{
-					name: 'Blade',
-					image: 'blade.png',
-					path: require('../assets/images/skills/html/blade.png')
-				},
-			])
-			const css = ref([
-				{
-					name: 'CSS3',
-					image: 'css3.png',
-					path: require('../assets/images/skills/css/css3.png')
-				},
-				{
-					name: 'Bootstrap',
-					image: 'bootstrap.png',
-					path: require('../assets/images/skills/css/bootstrap.png')
-				},
-				{
-					name: 'Tailwindcss',
-					image: 'tailwind-css.png',
-					path: require('../assets/images/skills/css/tailwind-css.png')
-				},
-				{
-					name: 'Materialize',
-					image: 'materialize.png',
-					path: require('../assets/images/skills/css/materialize.png')
-				},
-				{
-					name: 'Sass',
-					image: 'sass.png',
-					path: require('../assets/images/skills/css/sass.png')
-				},
-			])
-			const javascript = ref([
-				{
-					name: 'Vue',
-					image: 'vuejs.png',
-					path: require('../assets/images/skills/javascript/vuejs.png')
-				},
-				{
-					name: 'Javascript',
-					image: 'javascript.png',
-					path: require('../assets/images/skills/javascript/javascript.png')
-				},
-				{
-					name: 'Jquery',
-					image: 'javascript.png',
-					path: require('../assets/images/skills/javascript/jquery.png')
-				},
-				{
-					name: 'Node',
-					image: 'nodejs.png',
-					path: require('../assets/images/skills/javascript/nodejs.png')
-				},
-			])
-			const backend = ref([
-				{
-					name: 'PHP',
-					image: 'php.png',
-					path: require('../assets/images/skills/backend/php.png')
-				},
-				{
-					name: 'Laravel',
-					image: 'laravel.png',
-					path: require('../assets/images/skills/backend/laravel.png')
-				},
-				{
-					name: 'Livewire',
-					image: 'livewire.png',
-					path: require('../assets/images/skills/backend/livewire.png')
-				},
-				{
-					name: 'MySQL',
-					image: 'mysql.png',
-					path: require('../assets/images/skills/backend/mysql.png')
-				},
-			])
-			const versioncontrol = ref([
-				{
-					name: 'Git',
-					image: 'git.png',
-					path: require('../assets/images/skills/versioncontrol/git.png')
-				},
-				{
-					name: 'Github',
-					image: 'github.png',
-					path: require('../assets/images/skills/versioncontrol/github.png')
-				},
-				{
-					name: 'Bitbucket',
-					image: 'bitbucket.png',
-					path: require('../assets/images/skills/versioncontrol/bitbucket.png')
-				},
-			])
-			const others = ref([
-				{
-					name: 'Heroku',
-					image: 'heroku.png',
-					path: require('../assets/images/skills/others/heroku.png')
-				},
-				{
-					name: 'Photoshop',
-					image: 'photoshop.png',
-					path: require('../assets/images/skills/others/photoshop.png')
-				},
-				{
-					name: 'Sony Vegas',
-					image: 'sony-vegas.png',
-					path: require('../assets/images/skills/others/sony-vegas.png')
-				},
-				{
-					name: 'Filmora',
-					image: 'filmora.png',
-					path: require('../assets/images/skills/others/filmora.png')
-				},
-			])
-
-			return { html, css, javascript, backend, versioncontrol, others }
-		}
-	}
+export default {
+	name: 'Skills'
+}
 </script>
-
-<style scoped>
-	.html-enter-from,
-	.html-leave-to,
-	.css-enter-from,
-	.css-leave-to,
-	.javascript-enter-from,
-	.javascript-leave-to,
-	.backend-enter-from,
-	.backend-leave-to,
-	.versioncontrol-enter-from,
-	.versioncontrol-leave-to,
-	.others-enter-from,
-	.others-leave-to {
-		opacity: 0;
-		transform: scale(0.6);
-	}
-	.html-enter-active,
-	.html-leave-active,
-	.css-enter-active,
-	.css-leave-active,
-	.javascript-enter-active,
-	.javascript-leave-active,
-	.backend-enter-active,
-	.backend-leave-active,
-	.versioncontrol-enter-active,
-	.versioncontrol-leave-active,
-	.others-enter-active,
-	.others-leave-active {
-		transition: all 0.5s ease;
-	}
-</style>

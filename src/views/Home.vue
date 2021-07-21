@@ -1,64 +1,54 @@
 <template>
-  <div class="grid grid-cols-1 justify-items-center">
-    <!-- Header -->
-    <Header />
+    <div class="px-10 mt-0 xl:mt-20 xl:px-40">
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 justify-items-center items-center">
+            <img class="mt-10" src="../assets/images/svg/thinking.svg" alt="thinking.svg">
 
-    <div class="w-3/4 lg:w-3/4 -mt-40 bg-white shadow-lg rounded-2xl z-10">
-      <div class="grid sm:grid-cols-2 justify-items-center">
-        <!-- Image -->
-        <div class="sm:pl-5 sm:pb-5 sm:mr-auto">
-          <img src="../assets/images/pic2.jpg" alt="pic" class="-mt-24 rounded-full border-4 border-white h-48">
+            <div class="max-w-lg">
+                <div class="relative flex flex-col justify-center items-center text-center">
+                    <div class="text-white font-bold mt-10">
+                        <span class="typed-string">
+                            <span>Hi! I am <span class="text-orange-400">Anjo</span> Musni</span>
+                        </span>
+                        <span class="typed text-4xl leading-10"></span>
+                        <div class="mt-1 text-lg">
+                            Web Developer
+                        </div>
+                    </div>
+
+                    <Button class="mt-10">
+                        Download Resume
+                    </Button>
+                </div>
+            </div>
         </div>
 
-        <!-- Icons -->
-        <div class="p-5 sm:ml-auto">
-          <div class="flex space-x-5">
-            <MailIcon class="h-7 w-7 text-tapa-700" />
-            <GithubIcon class="h-7 w-7 text-tapa-700" />
-          </div>
+        <div class="flex justify-center mt-28">
+            <a href="#skills">
+                <ArrowDownIcon class="h-10 w-10 animate-bounce text-orange-400 cursor-pointer hidden xl:block" />
+            </a>
         </div>
-
-        <!-- Name -->
-        <div class="sm:col-span-2 px-5 pb-5 text-center sm:text-left sm:mr-auto text-tapa-700">
-          <h2>Anjo Musni</h2>
-        </div>
-      </div>
-
-      <!-- Nav -->
-      <div class="px-5 pb-5">
-        <Nav />
-      </div>
-
-      <!-- Content -->
-      <div class="px-5 pb-5">
-        <!-- Skills -->
-        <Skills />
-      </div>
     </div>
-  </div>
-
-  <!-- Footer -->
-  <Footer />
 </template>
 
 <script>
-import { MailIcon } from '@heroicons/vue/outline'
-import GithubIcon from '../components/icons/GithubIcon'
+    import Typed from 'typed.js';
+    import Button from '../components/Button'
+    import { ArrowDownIcon } from '@heroicons/vue/outline'
 
-import Header from '../components/Header'
-import Nav from '../components/Nav'
-import Skills from '../components/Skills'
-import Footer from '../components/Footer'
+    export default {
+        name: 'Home',
+        components: {
+            Button,
+            ArrowDownIcon,
+        },
+        mounted() {
+            var options = {
+                stringsElement: '.typed-string',
+                typeSpeed: 100,
+                autoInsertCss: true,
+            };
 
-export default {
-  name: 'Home',
-  components: {
-    MailIcon,
-    GithubIcon,
-    Header,
-    Nav,
-    Skills,
-    Footer,
-  },
-}
+            new Typed('.typed', options);
+        }
+    }
 </script>

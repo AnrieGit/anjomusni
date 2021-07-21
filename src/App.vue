@@ -1,8 +1,10 @@
 <template>
 	<div id="home" class="min-h-screen">
+		<Alert :show="show_alert" :message="message" :status="status" />
+
 		<Nav class="sticky top-0 z-10" />
 		
-		<Header />
+		<Home />
 
 		<Skills id="skills" />
 
@@ -10,7 +12,7 @@
 
 		<About id="about" />
 
-		<Footer />
+		<Contact id="contact" />
 	</div>
 </template>
 
@@ -20,24 +22,26 @@ import { ref } from 'vue'
 import { MailIcon } from '@heroicons/vue/outline'
 import GithubIcon from './components/icons/GithubIcon'
 
+import Alert from './components/Alert'
 import Nav from './components/Nav'
-import Header from './components/Header'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import About from './components/About'
-import Footer from './components/Footer'
+import Home from './views/Home'
+import Skills from './views/Skills'
+import Projects from './views/Projects'
+import About from './views/About'
+import Contact from './views/Contact'
 
 export default {
-	name: 'Home',
+	name: 'Main',
 	components: {
 		MailIcon,
 		GithubIcon,
+		Alert,
 		Nav,
-		Header,
+		Home,
 		Skills,
 		Projects,
 		About,
-		Footer,
+		Contact,
 	},
 	emits: ['show-alert'],
 	setup() {
@@ -65,7 +69,14 @@ export default {
 
 <style>
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
+}
+
+.typed-cursor {
+    color: #FB923C;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
 }
 
 #app {
