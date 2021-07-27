@@ -31,12 +31,12 @@
 									Built using VueJS and Tailwindcss with EmailJS.
 								</p>
 								<div class="flex flex-around items-centers gap-4 p-5">
-									<Button type="button">
+									<ButtonLink link="https://anjomusni.herokuapp.com/">
 										<EyeIcon class="h-4 w-4"/>
-									</Button>
-									<Button type="button">
+									</ButtonLink>
+									<ButtonLink link="https://github.com/AnrieGit/anjomusni" target="__blank">
 										<GithubIcon class="h-4 w-4"/>
-									</Button>
+									</ButtonLink>
 								</div>
 							</div>
 						</div>
@@ -58,7 +58,7 @@
 								</div>
 								<h3 class="text-white pt-5 text-center">Travel Management System</h3>
 								<p class="text-tapa-200 text-sm p-5">
-									Travel Management System is a web application that can add, edit, update and delete records of clients, tours, travel dates, guest lists, and discounts. It has a function that can export sales reports, guest lists, travel vouchers, and a database for backup.
+									Travel Management System is a web application that can add, edit, update and delete records of clients, tours, travel dates, travel vouchers, and discounts. It has a function that can export sales reports, guest lists, travel vouchers, and a database for backup.
 								</p>
 								<div class="flex flex-around items-centers gap-4 p-5">
 									<Button type="button">
@@ -86,15 +86,15 @@
 								</div>
 								<h3 class="text-white pt-5 text-center">Task Tracer</h3>
 								<p class="text-tapa-200 text-sm p-5">
-									Task Tracer is a simple web application made using Vue JS 3.
+									Task Tracer is a simple web application built using VueJS3.
 								</p>
 								<div class="flex flex-around items-centers gap-4 p-5">
-									<Button type="button">
+									<ButtonLink link="https://task-er.herokuapp.com/" target="__blank">
 										<EyeIcon class="h-4 w-4"/>
-									</Button>
-									<Button type="button">
+									</ButtonLink>
+									<ButtonLink link="https://github.com/AnrieGit/task-er" target="__blank">
 										<GithubIcon class="h-4 w-4"/>
-									</Button>
+									</ButtonLink>
 								</div>
 							</div>
 						</div>
@@ -116,15 +116,12 @@
 								</div>
 								<h3 class="text-white pt-5 text-center">ACCESS Computer College</h3>
 								<p class="text-tapa-200 text-sm p-5">
-									The main website of ACCESS Computer College.
+									Main website of ACCESS Computer College.
 								</p>
 								<div class="flex flex-around items-centers gap-4 p-5">
-									<Button type="button">
+									<ButtonLink link="https://access.edu.ph" target="__blank">
 										<EyeIcon class="h-4 w-4"/>
-									</Button>
-									<Button type="button">
-										<GithubIcon class="h-4 w-4"/>
-									</Button>
+									</ButtonLink>
 								</div>
 							</div>
 						</div>
@@ -146,7 +143,7 @@
 								</div>
 								<h3 class="text-white pt-5 text-center">Online Diploma System</h3>
 								<p class="text-tapa-200 text-sm p-5">
-									It is use to manage the printing process of diploma.
+									It is used to manage and organize the diploma of students.
 								</p>
 								<div class="flex flex-around items-centers gap-4 p-5">
 									<Button type="button">
@@ -176,7 +173,7 @@
 								</div>
 								<h3 class="text-white pt-5 text-center">Online I.D System</h3>
 								<p class="text-tapa-200 text-sm p-5">
-									Online I.D System or OIDS is a CRUD web application that can record and print the I.D of the students.
+									Online I.D System or OIDS is a simple CRUD web application. It can also export and print the I.D of employees and students.
 								</p>
 								<div class="flex flex-around items-centers gap-4 p-5">
 									<Button type="button">
@@ -200,6 +197,7 @@
 	import gsap from 'gsap'
 
 	import Button from '../components/Button'
+	import ButtonLink from '../components/ButtonLink'
 
 	import { EyeIcon } from '@heroicons/vue/solid'
 	import GithubIcon from '../components/icons/GithubIcon'
@@ -208,6 +206,7 @@
 		name: 'Projects',
 		components: {
 			Button,
+			ButtonLink,
 			EyeIcon,
 			GithubIcon,
 		},

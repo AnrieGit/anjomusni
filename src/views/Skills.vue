@@ -5,7 +5,7 @@
         </div>
 
 		<div class="bg-tapa-800 -mt-1">
-			<div class="px-10 xl:px-40">
+			<div id="skills" class="px-10 xl:px-40 py-28 lg:py-0">
 				<div class="text-center text-orange-400 pt-10 sm:pt-0">
 					<h1>Skills</h1>
 				</div>

@@ -1,18 +1,16 @@
 <template>
-	<div id="home" class="min-h-screen">
-		<Alert :show="show_alert" :message="message" :status="status" />
-
+	<div id="home" class="antialiased min-h-screen">
 		<Nav class="sticky top-0 z-10" />
 		
 		<Home />
 
-		<Skills id="skills" />
+		<Skills />
 
 		<Projects id="projects" />
 
 		<About id="about" />
 
-		<Contact id="contact" />
+		<Contact />
 	</div>
 </template>
 
@@ -22,7 +20,6 @@ import { ref } from 'vue'
 import { MailIcon } from '@heroicons/vue/outline'
 import GithubIcon from './components/icons/GithubIcon'
 
-import Alert from './components/Alert'
 import Nav from './components/Nav'
 import Home from './views/Home'
 import Skills from './views/Skills'
@@ -35,42 +32,20 @@ export default {
 	components: {
 		MailIcon,
 		GithubIcon,
-		Alert,
 		Nav,
 		Home,
 		Skills,
 		Projects,
 		About,
 		Contact,
-	},
-	emits: ['show-alert'],
-	setup() {
-		const show_alert = ref(false)
-		const message = ref('')
-		const status = ref(null)
-
-		return { 
-			show_alert,
-			message,
-			status,
-		}
-	},
-	methods: {
-		showAlert(response) {
-			this.show_alert = true;
-			this.message = response.message
-			this.status = response.status
-
-			setTimeout(()=>{ this.show_alert = false }, 3000)
-		}
 	}
 }
 </script>
 
 <style>
-html {
+/* html {
 	scroll-behavior: smooth;
-}
+} */
 
 .typed-cursor {
     color: #FB923C;

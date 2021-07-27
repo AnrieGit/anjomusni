@@ -1,8 +1,8 @@
 <template>
 	<div class="relative flex justify-center bg-tapa-900">
-		<div class="absolute px-10 -mt-60 xl:px-40">
+		<div id="contact" class="absolute px-10 -mt-60 xl:px-40">
 			<div class="overflow-hidden bg-tapa-700 font-medium shadow rounded-lg">
-				<div class="px-10 py-5 xl:px-40">
+				<div class="px-10 py-10 xl:px-40">
 					<div class="text-center text-orange-400">
 						<h1>Get in Touch</h1>
 					</div>
@@ -121,26 +121,11 @@ export default {
 							this.email = ''
 							this.message = ''
 
-							const message = 'Message Sent.'
-							this.$emit('show-alert', {message: message, status: 'success'})
-
 							this.$router.push('contact')
-						} else {
-							const message = res.text
-							this.$emit('show-alert', {message: message, status: 'error'})
 						}
 					})
-
-				} else {
-					const message = 'Don\'t forget to tick the reCaptcha.'
-					this.$emit('show-alert', {message: message, status: 'error'})
 				}
-
-			} else {
-				const message = 'Name, Email, and Message are required.'
-				this.$emit('show-alert', {message: message, status: 'error'})
 			}
-			
 		}
 	}
 }
