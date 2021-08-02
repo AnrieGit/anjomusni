@@ -8,8 +8,13 @@
 			</div>
 
 			<div class="px-10 xl:px-40 pt-20">
-				<div id="project-boxes" class="relative grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-20 sm:px-5 py-10">
-					<div class="relative box">
+				<transition-group class="relative grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-20 sm:px-5 py-10"
+					appear
+					tag="div"
+					@before-enter="beforeEnter"
+					@enter="enter"
+				>
+					<div class="relative" :key="0" :data-index="0">
 						<div class="absolute inset-0 bg-gradient-to-r from-tapa-600 to-tapa-500 rounded-md shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6"></div>
 						<div class="relative bg-tapa-800 shadow-lg rounded-lg h-full">
 							<div class="flex flex-col justify-center items-center ">
@@ -37,7 +42,7 @@
 						</div>
 					</div>
 
-					<div class="relative box">
+					<div class="relative" :key="1" :data-index="1">
 						<div class="absolute inset-0 bg-gradient-to-r from-tapa-600 to-tapa-500 rounded-md shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6"></div>
 						<div class="relative bg-tapa-800 shadow-lg rounded-lg h-full">
 							<div class="flex flex-col justify-center items-center ">
@@ -67,7 +72,7 @@
 						</div>
 					</div>
 
-					<div class="relative box">
+					<div class="relative" :key="2" :data-index="2">
 						<div class="absolute inset-0 bg-gradient-to-r from-tapa-600 to-tapa-500 rounded-md shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6"></div>
 						<div class="relative bg-tapa-800 shadow-lg rounded-lg h-full">
 							<div class="flex flex-col justify-center items-center">
@@ -95,7 +100,7 @@
 						</div>
 					</div>
 
-					<div class="relative box">
+					<div class="relative" :key="3" :data-index="3">
 						<div class="absolute inset-0 bg-gradient-to-r from-tapa-600 to-tapa-500 rounded-md shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6"></div>
 						<div class="relative bg-tapa-800 shadow-lg rounded-lg h-full">
 							<div class="flex flex-col justify-center items-center">
@@ -122,7 +127,7 @@
 						</div>
 					</div>
 
-					<div class="relative box">
+					<div class="relative" :key="4" :data-index="4">
 						<div class="absolute inset-0 bg-gradient-to-r from-tapa-600 to-tapa-500 rounded-md shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6"></div>
 						<div class="relative bg-tapa-800 shadow-lg rounded-lg h-full">
 							<div class="flex flex-col justify-center items-center ">
@@ -152,7 +157,7 @@
 						</div>
 					</div>
 
-					<div class="relative box">
+					<div class="relative" :key="5" :data-index="5">
 						<div class="absolute inset-0 bg-gradient-to-r from-tapa-600 to-tapa-500 rounded-md shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6"></div>
 						<div class="relative bg-tapa-800 shadow-lg rounded-lg h-full">
 							<div class="flex flex-col justify-center items-center ">
@@ -182,31 +187,15 @@
 						</div>
 					</div>
 
-				</div>
+				</transition-group>
 			</div>
 		</div>
 	</div>
 </template>
 
-<style>
-.box {
-	opacity: 0;
-	transform: translateY(100px);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-	.box {
-		transition: opacity 1.5s ease, transform 1.5s ease;
-	}
-}
-
-.box-transition {
-		opacity: 1;
-		transform: none;
-	}
-</style>
-
 <script>
+	import gsap from 'gsap'
+
 	import Button from '../components/Button'
 	import ButtonLink from '../components/ButtonLink'
 
@@ -221,24 +210,20 @@
 			EyeIcon,
 			GithubIcon,
 		},
-		mounted() {
-			const boxes = document.querySelectorAll('.box');
-
-			const observer = new IntersectionObserver(entries => {
-				entries.forEach(entry => {
-					boxes.forEach((box, index) => {
-						if(entry.isIntersecting) {
-							box.classList.add('box-transition');
-							return;
-						}
-
-						box.style.transitionDelay = (index * 0.2) +'s';
-						box.classList.remove('box-transition');
-					});
-				});
-			});
-
-			observer.observe(document.querySelector('#project-boxes'));
-		},
+		methods: {
+			beforeEnter(el) {
+				el.style.opacity = 0
+				el.style.transform = 'translateY(100px)'
+			},
+			enter(el, done) {
+				gsap.to(el, {
+					opacity: 1,
+					y: 0,
+					duration: 0.8,
+					delay: el.dataset.index * 0.2,
+					onComplete: done,
+				})
+			}
+		}
 	}
 </script>

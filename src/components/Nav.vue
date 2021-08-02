@@ -16,86 +16,48 @@
 					</div>
 					
 					<ul class="mt-8 px-2 font-medium text-lg">
-						<router-link @click="this.open = false" :to="{ name: 'skills' }" class="block py-2 px-4 hover:bg-tapa-800 hover:text-orange-400 rounded-md cursor-pointer">
-							Skills
-						</router-link>
-						<router-link @click="this.open = false" :to="{ name: 'projects' }" class="block py-2 px-4 hover:bg-tapa-800 hover:text-orange-400 rounded-md cursor-pointer">
-							Projects
-						</router-link>
-						<router-link @click="this.open = false" :to="{ name: 'about' }" class="block py-2 px-4 hover:bg-tapa-800 hover:text-orange-400 rounded-md cursor-pointer">
-							About
-						</router-link>
-						<router-link @click="this.open = false" :to="{ name: 'contact' }" class="block py-2 px-4 hover:bg-tapa-800 hover:text-orange-400 rounded-md cursor-pointer">
-							Contact
-						</router-link>
+						<li>
+							<a href="#skills" @click="this.open = false" class="block py-2 px-4 hover:bg-tapa-800 hover:text-orange-400 rounded-md cursor-pointer">
+								Skills
+							</a>
+						</li>
+						<li>
+							<a href="#projects" @click="this.open = false" class="block py-2 px-4 hover:bg-tapa-800 hover:text-orange-400 rounded-md cursor-pointer">
+								Projects
+							</a>
+						</li>
+						<li>
+							<a href="#about" @click="this.open = false" class="block py-2 px-4 hover:bg-tapa-800 hover:text-orange-400 rounded-md cursor-pointer">
+								About
+							</a>
+						</li>
+						<li>
+							<a href="#contact" @click="this.open = false" class="block py-2 px-4 hover:bg-tapa-800 hover:text-orange-400 rounded-md cursor-pointer">
+								Contact
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>
 
-			<div class="px-10 xl:px-40 flex items-center py-7 relative">
-				<!-- Menu -->
+			<div class="px-10 xl:px-40 flex items-center py-7">
+				<!-- Menu Icon -->
 				<div class="block lg:hidden">
 					<MenuIcon @click="this.openSideBar" class="h-7 w-7 text-tapa-200 hover:text-orange-400 cursor-pointer"/>
 				</div>
 				
 				<div class="logo pl-10 lg:pl-0">
-					<router-link :to="{ name: 'home' }" v-slot="{ href, navigate }" custom>
-						<a :href="href" 
-							@click="navigate"
-							class="text-orange-400 font-bold text-3xl"
-						>
-							ANjo
-						</a>
-					</router-link>
+					<a href="#home" class="text-orange-400 font-bold text-3xl">ANjo</a>
 				</div>
 
-				<ul class="flex justify-center sm:justify-start space-x-10 hidden lg:block ml-auto text-tapa-200 ">
-					<router-link :to="{ name: 'skills' }" v-slot="{ href, navigate, isActive }" custom>
-						<a class="font-medium hover:text-orange-400" 
-							:href="href" 
-							@click="navigate"
-							:class="[isActive ? 'text-orange-400' : '']"
-						>
-							Skills
-						</a>
-					</router-link>
-					<router-link :to="{ name: 'projects' }" v-slot="{ href, navigate, isActive }" custom>
-						<a class="font-medium hover:text-orange-400" 
-							:href="href" 
-							@click="navigate"
-							:class="[isActive ? 'text-orange-400' : '']"
-						>
-							Project
-						</a>
-					</router-link>
-					<router-link :to="{ name: 'about' }" v-slot="{ href, navigate, isActive }" custom>
-						<a class="font-medium hover:text-orange-400" 
-							:href="href" 
-							@click="navigate"
-							:class="[isActive ? 'text-orange-400' : '']"
-						>
-							About
-						</a>
-					</router-link>
-					<router-link :to="{ name: 'contact' }" v-slot="{ href, navigate, isActive }" custom>
-						<a class="font-medium hover:text-orange-400" 
-							:href="href" 
-							@click="navigate"
-							:class="[isActive ? 'text-orange-400' : '']"
-						>
-							Contact
-						</a>
-					</router-link>
-					<!-- <router-link :to="{ name: 'home'}" v-slot="{ href, navigate, isActive }" custom>
-						<a class="pb-5 pt-5 text-tapa-100 font-medium" 
-							:href="href" 
-							@click="navigate" 
-							:class="[isActive ? 'font-bold border-b-4 border-tapa-400' : '']"
-						>
-							Home
-						</a>
-					</router-link> -->
-				</ul>
+				<div class="hidden lg:block ml-auto">
+					<ul class="flex items-center justify-center space-x-10 text-tapa-200">
+						<li class="links skills"><a href="#skills" class="font-medium hover:text-orange-400">Skills</a></li>
+						<li class="links projects"><a href="#projects" class="font-medium hover:text-orange-400">Projects</a></li>
+						<li class="links about"><a href="#about" class="font-medium hover:text-orange-400">About</a></li>
+						<li class="links contact"><a href="#contact" class="font-medium hover:text-orange-400">Contact</a></li>
+					</ul>
+				</div>
 			</div>
 		</nav>
 	</div>

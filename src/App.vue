@@ -1,22 +1,22 @@
 <template>
 	<div id="home" class="antialiased min-h-screen">
-		<Nav class="sticky top-0 z-10" />
+		<Nav class="sticky top-0 z-10"/>
 		
 		<Home />
 
 		<Skills />
 
-		<Projects id="projects" />
+		<Projects id="projects" class="sections"/>
 
-		<About id="about" />
+		<About id="about" class="sections"/>
 
-		<Contact />
+		<Contact id="contact" class="sections"/>
+
+		<Footer />
 	</div>
 </template>
 
 <script>
-import { ref } from 'vue'
-
 import { MailIcon } from '@heroicons/vue/outline'
 import GithubIcon from './components/icons/GithubIcon'
 
@@ -26,6 +26,7 @@ import Skills from './views/Skills'
 import Projects from './views/Projects'
 import About from './views/About'
 import Contact from './views/Contact'
+import Footer from './components/Footer'
 
 export default {
 	name: 'Main',
@@ -38,14 +39,37 @@ export default {
 		Projects,
 		About,
 		Contact,
-	}
+		Footer,
+	},
+	mounted() {
+		const sections = document.querySelectorAll('.sections');
+		const links = document.querySelectorAll('.links');
+
+		window.addEventListener('scroll', () => {
+			let current = '';
+			sections.forEach(section => {
+				const sectionTop = section.offsetTop;
+				const sectionHeight = section.clientHeight;
+				if(pageYOffset >= (sectionTop - 300)) {
+					current = section.getAttribute('id');
+				}
+			});
+
+			links.forEach(link => {
+				link.classList.remove('text-orange-400');
+				if(link.classList.contains(current)) {
+					link.classList.add('text-orange-400');
+				}
+			});
+		})
+	},
 }
 </script>
 
 <style>
-/* html {
+html {
 	scroll-behavior: smooth;
-} */
+}
 
 .typed-cursor {
     color: #FB923C;

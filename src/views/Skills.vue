@@ -1,16 +1,16 @@
 <template>
 	<div>
-		<div class="mt-10">
-            <img class="w-full" src="../assets/images/svg/Wave1.svg" alt="Wave1.svg">
+		<div id="skills" class="-mb-1 sections">
+            <img src="../assets/images/svg/Wave1.svg" alt="Wave1.svg">
         </div>
 
-		<div class="bg-tapa-800 -mt-1">
-			<div id="skills" class="px-10 xl:px-40 py-28 lg:py-0">
+		<div class="bg-tapa-800 pt-20 xl:pt-0 pb-20 xl:pb-0">
+			<div class="px-10 xl:px-40">
 				<div class="text-center text-orange-400 pt-10 sm:pt-0">
 					<h1>Skills</h1>
 				</div>
 				
-				<div class="grid grid-cols-3 lg:grid-cols-5 justify-items-center mt-20">
+				<div class="grid grid-cols-3 lg:grid-cols-5 justify-items-center pt-20">
 					<div class="flex flex-col justify-center text-center m-5">
 						<img class="h-16" src="../assets/images/skills/html5.svg" alt="html5.svg">
 						<span class="text-medium text-white mt-1">

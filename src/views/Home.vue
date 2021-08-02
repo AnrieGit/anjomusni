@@ -1,5 +1,5 @@
 <template>
-    <div class="px-10 mt-0 xl:mt-20 xl:px-40">
+    <div class="px-10 xl:px-40 pt-20 pb-40">
         <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 justify-items-center items-center">
             <img class="mt-10" src="../assets/images/svg/thinking.svg" alt="thinking.svg">
 
@@ -15,30 +15,30 @@
                         </div>
                     </div>
 
-                    <Button class="mt-10">
+                    <ButtonLink link="./pdf/CV(Anjo)v7.pdf" target="__blank" class="mt-10">
                         Download Resume
-                    </Button>
+                    </ButtonLink>
                 </div>
             </div>
         </div>
 
-        <div class="flex justify-center mt-28">
+        <!-- <div class="flex justify-center mt-28">
             <a href="#skills">
                 <ArrowDownIcon class="h-10 w-10 animate-bounce text-orange-400 cursor-pointer hidden xl:block" />
             </a>
-        </div>
+        </div> -->
     </div>
 </template>
 
 <script>
     import Typed from 'typed.js';
-    import Button from '../components/Button'
+    import ButtonLink from '../components/ButtonLink'
     import { ArrowDownIcon } from '@heroicons/vue/outline'
 
     export default {
         name: 'Home',
         components: {
-            Button,
+            ButtonLink,
             ArrowDownIcon,
         },
         mounted() {
