@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-tapa-900 px-10 xl:px-40 pt-40 pb-40">
+	<div class="px-10 xl:px-40 pt-40 pb-40">
 		<div class="px-10 xl:px-40">
 			<div class="text-center text-orange-400">
 				<h1>Get in Touch</h1>
@@ -31,8 +31,7 @@
 					</div>
 
 				</div>
-				<div class="grid md:grid-cols-1 lg:grid-cols-2 gap-4 justify-content-center items-center mt-4">	
-					<!-- <div class="mx-auto lg:mx-0 g-recaptcha" data-sitekey="6LdWQvsaAAAAAHg2tFbb_Ye2ydCGOj8wJUu_Aj0V" data-callback="captchaCallBack"></div> -->
+				<div class="grid md:grid-cols-1 lg:grid-cols-2 gap-4 justify-content-center items-center mt-4">
 					<vueRecaptcha class="mx-auto lg:mx-0" ref="vueRecaptcha" siteKey="6LdWQvsaAAAAAHg2tFbb_Ye2ydCGOj8wJUu_Aj0V" @verify="recaptchaVerified" @expire="recaptchaExpired" />
 					<Button :loading="loading" class="lg:ml-auto" name="send" type="submit">
 						<LoadingIcon v-if="loading" />

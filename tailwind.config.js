@@ -5,6 +5,9 @@ module.exports = {
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		extend: {
+			// backgroundImage: (theme) => ({
+			// 	profile: 'url("~@/assets/images/svg/profile.svg")',
+			// }),
 			colors: {
 				tapa: {
 					"50": "#f8f8f8",
@@ -39,10 +42,17 @@ module.exports = {
 					},
 				},
 			},
-			// backgroundImage: (theme) => ({
-			// 	intersection:
-			// 		"url('~@/assets/images/background/happy-intersection.svg')",
-			// }),
+			transitionDuration: {
+				"0": "0ms",
+				"1500": "1500ms",
+				"2000": "2000ms",
+				"2500": "2500ms",
+				"3000": "3000ms",
+				"3500": "3500ms",
+				"4000": "4000ms",
+				"4500": "4500ms",
+				"5000": "5000ms",
+			},
 		},
 	},
 	variants: {
