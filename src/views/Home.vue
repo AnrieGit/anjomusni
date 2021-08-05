@@ -12,10 +12,12 @@
                                 Web Developer
                             </div>
                         </div>
-
-                        <ButtonLink id="header-content-3" link="./pdf/CV(Anjo)v7.pdf" target="__blank" class="mt-10 transition duration-1000 delay-1000 transform -translate-x-20 opacity-0">
-                            Download Resume
-                        </ButtonLink>
+                        
+                        <div id="header-content-3" class="transition duration-1000 delay-1000 transform -translate-x-20 opacity-0">
+                            <ButtonLink link="./pdf/CV(Anjo)v7.pdf" target="__blank" class="mt-10">
+                                Download Resume
+                            </ButtonLink>
+                        </div>
                     </div>
                 </div>
             </div>

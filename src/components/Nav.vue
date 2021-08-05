@@ -40,7 +40,7 @@
 				</div>
 			</div>
 
-			<div class="px-10 xl:px-40 flex items-center py-7">
+			<div :class="[scrollPosition > 50 ? 'py-5' : 'py-7', 'px-10 xl:px-40 flex items-center']">
 				<!-- Menu Icon -->
 				<div class="block lg:hidden">
 					<MenuIcon @click="this.openSideBar" class="h-7 w-7 text-tapa-200 hover:text-orange-400 cursor-pointer"/>

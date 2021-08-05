@@ -13,7 +13,15 @@
 					
 					<div class="text-white max-w-2xl">
 						<div>
-							<span class="text-bold text-2xl"><span class="text-orange-400">Anjo</span> Musni</span>
+							<div class="flex items-center">
+								<span class="text-bold text-2xl"><span class="text-orange-400">Anjo</span> Musni</span>
+								<a href="mailto:350anviera195@gmail.com">
+									<MailIcon class="h-6 w-6 ml-5 text-orange-400"/>
+								</a>
+								<a href="https://github.com/AnrieGit" target="__blank">
+									<img src="../assets/images/skills/github.svg" alt="github.svg" class="h-6 w-6 ml-3 text-white">
+								</a>
+							</div>
 							<div class="text-sm text-tapa-400">
 								Web Developer
 							</div>
@@ -31,7 +39,12 @@
 </template>
 
 <script>
+import { MailIcon } from '@heroicons/vue/outline'
+
 export default {
 	name: 'About',
+	components: {
+		MailIcon,
+	}
 }
 </script>
