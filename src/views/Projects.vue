@@ -43,7 +43,7 @@
 							<div class="flex flex-col justify-center items-center ">
 								<div class="relative">
 									<img src="../assets/images/svg/Wave1.svg" alt="Wave1.svg" class="absolute bottom-0 -mb-1">
-									<img src="../assets/images/projects/adventuristas/adventuristas1.jpg" alt="adventuristas1.jpg" class="rounded-t-lg">
+									<img src="../assets/images/projects/aratna/aratna1.jpg" alt="aratna1.jpg" class="rounded-t-lg">
 								</div>
 								<div class="flex items-center pt-1 px-5 space-x-3">
 									<img class="h-5 w-5" src="../assets/images/skills/laravel.svg" title="Laravel" alt="laravel.svg">
@@ -51,17 +51,14 @@
 									<img class="h-5 w-5" src="../assets/images/skills/mysql.svg" title="MySQL" alt="mysql.svg">
 									<img class="h-5 w-5" src="../assets/images/skills/tailwind-css.svg" title="Tailwindcss" alt="tailwind-css.svg">
 								</div>
-								<h3 class="text-white pt-5 text-center">Travel Management System</h3>
+								<h3 class="text-white pt-5 text-center">Aratna Travel & Tours</h3>
 								<p class="text-tapa-200 text-sm p-5">
-									Travel Management System is a web application that can add, edit, update and delete records of clients, tours, travel dates, travel vouchers, and discounts. It has a function that can export sales reports, guest lists, travel vouchers, and a database for backup.
+									Aratna Travel Management System is a web application that can add, edit, update and delete records of clients, tours, travel dates, travel vouchers, and discounts. It has a function that can export sales reports, guest lists and travel vouchers.
 								</p>
 								<div class="flex flex-around items-centers gap-4 p-5">
-									<Button type="button">
+									<ButtonLink link="https://youtu.be/4UkCxUGI8FU" target="__blank">
 										<EyeIcon class="h-4 w-4"/>
-									</Button>
-									<Button type="button">
-										<GithubIcon class="h-4 w-4"/>
-									</Button>
+									</ButtonLink>
 								</div>
 							</div>
 						</div>
@@ -94,94 +91,6 @@
 							</div>
 						</div>
 					</div>
-
-					<div class="relative box">
-						<div class="absolute inset-0 bg-gradient-to-r from-tapa-600 to-tapa-500 rounded-md shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6"></div>
-						<div class="relative bg-tapa-800 shadow-lg rounded-lg h-full">
-							<div class="flex flex-col justify-center items-center">
-								<div class="relative">
-									<img src="../assets/images/svg/Wave1.svg" alt="Wave1.svg" class="absolute bottom-0 -mb-1">
-									<img src="../assets/images/projects/accesswebsite/accesswebsite1.jpg" alt="accesswebsite1.jpg" class="rounded-t-lg">
-								</div>
-								<div class="flex items-center pt-1 px-5 space-x-3">
-									<img class="h-5 w-5" src="../assets/images/skills/laravel.svg" title="Laravel" alt="laravel.svg">
-									<img class="h-5 w-5" src="../assets/images/skills/vue.svg" title="VueJS" alt="vue.svg">
-									<img class="h-5 w-5" src="../assets/images/skills/mysql.svg" title="MySQL" alt="mysql.svg">
-									<img class="h-5 w-5" src="../assets/images/skills/bootstrap.svg" title="Bootstrap" alt="bootstrap.svg">
-								</div>
-								<h3 class="text-white pt-5 text-center">ACCESS Computer College</h3>
-								<p class="text-tapa-200 text-sm p-5">
-									Main website of ACCESS Computer College.
-								</p>
-								<div class="flex flex-around items-centers gap-4 p-5">
-									<ButtonLink link="https://access.edu.ph" target="__blank">
-										<EyeIcon class="h-4 w-4"/>
-									</ButtonLink>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="relative box">
-						<div class="absolute inset-0 bg-gradient-to-r from-tapa-600 to-tapa-500 rounded-md shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6"></div>
-						<div class="relative bg-tapa-800 shadow-lg rounded-lg h-full">
-							<div class="flex flex-col justify-center items-center ">
-								<div class="relative">
-									<img src="../assets/images/svg/Wave1.svg" alt="Wave1.svg" class="absolute bottom-0 -mb-1">
-									<img src="../assets/images/projects/diploma/diploma1.jpg" alt="diploma1.jpg" class="rounded-t-lg">
-								</div>
-								<div class="flex items-center pt-1 px-5 space-x-3">
-									<img class="h-5 w-5" src="../assets/images/skills/laravel.svg" title="Laravel" alt="laravel.svg">
-									<img class="h-5 w-5" src="../assets/images/skills/livewire.svg" title="Livewire" alt="livewire.svg">
-									<img class="h-5 w-5" src="../assets/images/skills/mysql.svg" title="MySQL" alt="mysql.svg">
-									<img class="h-5 w-5" src="../assets/images/skills/tailwind-css.svg" title="Tailwindcss" alt="tailwind-css.svg">
-								</div>
-								<h3 class="text-white pt-5 text-center">Online Diploma System</h3>
-								<p class="text-tapa-200 text-sm p-5">
-									It is used to manage and organize the diploma of students.
-								</p>
-								<div class="flex flex-around items-centers gap-4 p-5">
-									<Button type="button">
-										<EyeIcon class="h-4 w-4"/>
-									</Button>
-									<Button type="button">
-										<GithubIcon class="h-4 w-4"/>
-									</Button>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="relative box">
-						<div class="absolute inset-0 bg-gradient-to-r from-tapa-600 to-tapa-500 rounded-md shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6"></div>
-						<div class="relative bg-tapa-800 shadow-lg rounded-lg h-full">
-							<div class="flex flex-col justify-center items-center ">
-								<div class="relative">
-									<img src="../assets/images/svg/Wave1.svg" alt="Wave1.svg" class="absolute bottom-0 -mb-1">
-									<img src="../assets/images/projects/id/id1.jpg" alt="id1.jpg" class="rounded-t-lg">
-								</div>
-								<div class="flex items-center pt-1 px-5 space-x-3">
-									<img class="h-5 w-5" src="../assets/images/skills/php.svg" title="PHP" alt="php.svg">
-									<img class="h-5 w-5" src="../assets/images/skills/mysql.svg" title="MySQL" alt="mysql.svg">
-									<img class="h-5 w-5" src="../assets/images/skills/jquery.svg" title="Jquery" alt="jquery.svg">
-									<img class="h-5 w-5" src="../assets/images/skills/bootstrap.svg" title="Bootstrap" alt="bootstrap.svg">
-								</div>
-								<h3 class="text-white pt-5 text-center">Online I.D System</h3>
-								<p class="text-tapa-200 text-sm p-5">
-									Online I.D System or OIDS is a simple CRUD web application. It can also export and print the I.D of employees and students.
-								</p>
-								<div class="flex flex-around items-centers gap-4 p-5">
-									<Button type="button">
-										<EyeIcon class="h-4 w-4"/>
-									</Button>
-									<Button type="button">
-										<GithubIcon class="h-4 w-4"/>
-									</Button>
-								</div>
-							</div>
-						</div>
-					</div>
-
 				</div>
 			</div>
 		</div>
