@@ -53,7 +53,7 @@
 								</div>
 								<h3 class="text-white pt-5 text-center">Aratna Travel & Tours</h3>
 								<p class="text-tapa-200 text-sm p-5">
-									Aratna Travel Management System is a web application that can add, edit, update and delete records of clients, tours, travel dates, travel vouchers, and discounts. It has a function that can export sales reports, guest lists and travel vouchers.
+									Aratna Travel Management System is a web application that allows travel consultants to export sales reports, guest lists, and travel vouchers. It can also book a client, add tours, travel dates, guest lists, discounts, and user accounts.
 								</p>
 								<div class="flex flex-around items-centers gap-4 p-5">
 									<ButtonLink link="https://youtu.be/4UkCxUGI8FU" target="__blank">
