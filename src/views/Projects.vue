@@ -15,6 +15,33 @@
 							<div class="flex flex-col justify-center items-center ">
 								<div class="relative">
 									<img src="../assets/images/svg/Wave1.svg" alt="Wave1.svg" class="absolute bottom-0 -mb-1">
+									<img src="../assets/images/projects/vmovies/vmovies.jpg" alt="vmovies.jpg" class="rounded-t-lg">
+								</div>
+								<div class="flex items-center pt-1 px-5 space-x-3">
+									<img class="h-5 w-5" src="../assets/images/skills/vue.svg" title="VueJS" alt="vue.svg">
+								</div>
+								<h3 class="text-white pt-5 text-center">VMovies</h3>
+								<p class="text-tapa-200 text-sm p-5">
+									VMovies is a simple Movie Information App powered by OMDb API.
+								</p>
+								<div class="flex flex-around items-centers gap-4 p-5">
+									<ButtonLink link="https://vmovie.netlify.app/" target="__blank">
+										<EyeIcon class="h-4 w-4"/>
+									</ButtonLink>
+									<ButtonLink link="https://github.com/AnrieGit/vmovies" target="__blank">
+										<GithubIcon class="h-4 w-4"/>
+									</ButtonLink>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="relative box">
+						<div class="absolute inset-0 bg-gradient-to-r from-tapa-600 to-tapa-500 rounded-md shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6"></div>
+						<div class="relative bg-tapa-800 shadow-lg rounded-lg h-full">
+							<div class="flex flex-col justify-center items-center ">
+								<div class="relative">
+									<img src="../assets/images/svg/Wave1.svg" alt="Wave1.svg" class="absolute bottom-0 -mb-1">
 									<img src="../assets/images/projects/portfolio/portfolio1.jpg" alt="portfolio1.jpg" class="rounded-t-lg">
 								</div>
 								<div class="flex items-center pt-1 px-5 space-x-3">
