@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full bg-tapa-900 p-5">
+    <div class="w-full bg-tapa-800 p-5">
         <div class="flex justify-center items-center text-sm text-white z-10">
             Made with <HeartIcon class="h-5 w-5 text-red-500 mx-1"/> by <span class="text-orange-400 font-bold ml-1">Anjo</span>.
         </div>

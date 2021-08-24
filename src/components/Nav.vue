@@ -1,65 +1,73 @@
 <template>
-	<div>
-		<nav :class="[scrollPosition > 50 ? 'bg-tapa-800 shadow' : '', 'transition duration-300 ease-in-out']">
-			<!-- Sidebar -->
-			<div class="absolute h-screen z-20 inset-0 transform duration-200 w-80 bg-orange-400 text-tapa-800" 
-				:class="{'translate-x-0 ease-in': this.open === true, '-translate-x-full ease-out': this.open === false}"
-			>
-				<div class="py-5">
-					<div class="flex item-center justify-between px-5">
-						<span class="text-tapa-800 font-bold text-3xl">
-							ANjo
-						</span>
-						<button @click="this.openSideBar" type="button" class="focus:outline-none hover:bg-tapa-800 hover:text-orange-400 rounded-md p-2">
-							<ChevronLeftIcon class="h-7 w-7" />
-						</button>
-					</div>
-					
-					<ul class="mt-8 px-2 font-medium text-lg">
-						<li>
-							<a href="#skills" @click="this.open = false" class="block py-2 px-4 hover:bg-tapa-800 hover:text-orange-400 rounded-md cursor-pointer">
-								Skills
-							</a>
-						</li>
-						<li>
-							<a href="#projects" @click="this.open = false" class="block py-2 px-4 hover:bg-tapa-800 hover:text-orange-400 rounded-md cursor-pointer">
-								Projects
-							</a>
-						</li>
-						<li>
-							<a href="#about" @click="this.open = false" class="block py-2 px-4 hover:bg-tapa-800 hover:text-orange-400 rounded-md cursor-pointer">
-								About
-							</a>
-						</li>
-						<li>
-							<a href="#contact" @click="this.open = false" class="block py-2 px-4 hover:bg-tapa-800 hover:text-orange-400 rounded-md cursor-pointer">
-								Contact
-							</a>
-						</li>
-					</ul>
+	<div @click="this.open = false" 
+		class="fixed top-0 w-full h-screen bg-tapa-900 opacity-70 overflow-hidden z-20"
+		:class="{'hidden': open === false}"
+	></div>
+	<nav :class="[scrollPosition > 50 ? 'bg-tapa-800 shadow' : '', 'fixed w-full z-10 transition-all duration-300 ease-in-out']">
+		<div :class="[scrollPosition >= 50 ? 'h-20' : 'h-24', 'px-10 xl:px-40 flex items-center transition-all duration-300 ease-in-out']">
+			<div class="logo">
+				<a href="#home">
+					<img src="../assets/images/logo/Logo.svg" class="h-16 w-16" alt="Logo.svg">
+				</a>
+			</div>
+
+			<!-- Menu Icon -->
+			<div class="block lg:hidden ml-auto z-30">
+				<div class="px-5">
+					<MenuIcon v-show="!open" @click="openSideBar" class="h-7 w-7 text-tapa-200 hover:text-orange-400 cursor-pointer"/>
 				</div>
 			</div>
 
-			<div :class="[scrollPosition >= 50 ? 'py-5' : 'py-7', 'px-10 xl:px-40 flex items-center']">
-				<!-- Menu Icon -->
-				<div class="block lg:hidden">
-					<MenuIcon @click="this.openSideBar" class="h-7 w-7 text-tapa-200 hover:text-orange-400 cursor-pointer"/>
+			<div class="hidden lg:block ml-auto">
+				<ul class="flex items-center justify-center space-x-10 text-tapa-200 px-5">
+					<li class="links skills"><a href="#skills" class="font-medium hover:text-orange-400">Skills</a></li>
+					<li class="links projects"><a href="#projects" class="font-medium hover:text-orange-400">Projects</a></li>
+					<li class="links about"><a href="#about" class="font-medium hover:text-orange-400">About</a></li>
+					<li class="links contact"><a href="#contact" class="font-medium hover:text-orange-400">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="fixed z-30">
+		<!-- Sidebar -->
+		<div class="absolute h-screen inset-0 transform duration-200 w-80 bg-orange-400 text-tapa-800" 
+			:class="{'translate-x-0 ease-in': open === true, '-translate-x-full ease-out': open === false}"
+		>
+			<div class="py-5">
+				<div class="flex items-center px-5">
+					<a href="#home">
+						<img src="../assets/images/logo/Logo-tapa.svg" class="h-16 w-16" alt="Logo-tapa.svg">
+					</a>
+					<button @click="this.openSideBar" type="button" class="transform duration-300 hover:scale-125 rounded-md p-2 ml-auto">
+						<ChevronLeftIcon class="h-7 w-7" />
+					</button>
 				</div>
 				
-				<div class="logo pl-10 lg:pl-0">
-					<a href="#home" class="text-orange-400 font-bold text-3xl">ANjo</a>
-				</div>
-
-				<div class="hidden lg:block ml-auto">
-					<ul class="flex items-center justify-center space-x-10 text-tapa-200">
-						<li class="links skills"><a href="#skills" class="font-medium hover:text-orange-400">Skills</a></li>
-						<li class="links projects"><a href="#projects" class="font-medium hover:text-orange-400">Projects</a></li>
-						<li class="links about"><a href="#about" class="font-medium hover:text-orange-400">About</a></li>
-						<li class="links contact"><a href="#contact" class="font-medium hover:text-orange-400">Contact</a></li>
-					</ul>
-				</div>
+				<ul class="mt-8 px-2 font-medium text-lg">
+					<li>
+						<a href="#skills" @click="open = false" class="block py-2 px-4 hover:bg-tapa-800 hover:text-orange-400 rounded-md cursor-pointer">
+							Skills
+						</a>
+					</li>
+					<li>
+						<a href="#projects" @click="open = false" class="block py-2 px-4 hover:bg-tapa-800 hover:text-orange-400 rounded-md cursor-pointer">
+							Projects
+						</a>
+					</li>
+					<li>
+						<a href="#about" @click="open = false" class="block py-2 px-4 hover:bg-tapa-800 hover:text-orange-400 rounded-md cursor-pointer">
+							About
+						</a>
+					</li>
+					<li>
+						<a href="#contact" @click="open = false" class="block py-2 px-4 hover:bg-tapa-800 hover:text-orange-400 rounded-md cursor-pointer">
+							Contact
+						</a>
+					</li>
+				</ul>
 			</div>
-		</nav>
+		</div>
 	</div>
 </template>
 

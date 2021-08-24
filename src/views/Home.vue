@@ -1,6 +1,6 @@
 <template>
-    <div class="px-10 xl:px-40 pt-20 pb-40">
-        <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 justify-items-center items-center">
+    <div class="px-10 xl:px-40 pt-40 pb-40">
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 justify-items-center items-center transition-all duration-300 ease-in-out">
             <div class="max-w-lg order-2 xl:order-1">
                 <div class="relative flex flex-col justify-center items-center text-center">
                     <div id="header-content">

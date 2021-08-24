@@ -1,7 +1,6 @@
 <template>
-	<div id="home" class="antialiased min-h-screen">
-		<Nav class="sticky top-0 z-10"/>
-		
+	<Nav />
+	<div id="home" class="antialiased">
 		<Home />
 
 		<Skills />
@@ -71,11 +70,25 @@ html {
 	scroll-behavior: smooth;
 }
 
-.typed-cursor {
-    color: #FB923C;
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-    font-weight: 700;
+::-webkit-scrollbar {
+    width: 16px;
+    left: -100px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #484441;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #FB923C;
+    background-clip: padding-box;
+    border: 4px solid rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #FDBA74;
 }
 
 #app {
