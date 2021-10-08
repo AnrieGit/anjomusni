@@ -29,7 +29,7 @@
 						<div class="text-tapa-200 mt-10">
 							<div class="mb-3">I'm a web developer living in Novaliches, Quezon City, Philippines.</div>
 							<div class="mb-3">I worked as an I.T staff for 4 years and was given a duty to make web applications and websites for the company. I've learned a lot of things along the way not only in web development but also in computer and network troubleshooting and computer software and hardware installation.</div>
-							<div>I really have an interest and truly enjoy coding and building different web applications and websites usually with PHP, Laravel, Vuejs, and MySQL.</div>
+							<div>I am really interested, and truly enjoy coding and building different web applications and websites usually with PHP, Laravel, Vuejs, and MySQL.</div>
 						</div>
 					</div>
 				</div>
