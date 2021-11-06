@@ -14,7 +14,7 @@
                         </div>
                         
                         <div id="header-content-3" class="transition duration-1000 delay-1000 transform -translate-x-20 opacity-0">
-                            <ButtonLink link="./pdf/CV(Anjo)v8.pdf" target="__blank" class="mt-10">
+                            <ButtonLink link="./pdf/CV_Anjo_Musni.pdf" target="__blank" class="mt-10">
                                 Download Resume
                             </ButtonLink>
                         </div>
