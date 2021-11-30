@@ -2,7 +2,7 @@
 	<div>
 		<div class="px-10 lg:px-40 pt-40 pb-40 bg-tapa-800 bg-profile bg-no-repeat bg-center shadow-lg">
 			<div class="flex justify-center space-x-0 lg:space-x-40 items-center">
-				<img src="../assets/images/svg/profile.svg" class="hidden lg:block w-80" alt="profile.svg">
+				<!-- <img src="../assets/images/svg/profile.svg" class="hidden lg:block w-80" alt="profile.svg"> -->
 				<div class="flex flex-col justify-center gap-10 items-center">
 					<div class="relative border-2 border-orange-400 rounded-full">
 						<!-- <div class="absolute h-44 w-44 top-0 -left-5 bg-orange-300 rounded-full opacity-70 filter blur-lg animate-blob"></div>
